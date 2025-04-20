@@ -24,7 +24,8 @@ creds_dict = {
     "universe_domain": st.secrets["gcp"]["universe_domain"]
 }
 
-
+# Load the credentials from the dict and use them
+creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
 client = gspread.authorize(creds_dict)
 
 # Open the Google Sheet by name
