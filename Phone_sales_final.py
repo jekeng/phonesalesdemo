@@ -25,7 +25,7 @@ creds_dict = {
 }
 
 
-client = gspread.authorize(creds)
+client = gspread.authorize(creds_dict)
 
 # Open the Google Sheet by name
 sheet = client.open("Phone Sales Tracker").sheet1  # Replace with your sheet name
