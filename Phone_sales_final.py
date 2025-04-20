@@ -3,6 +3,8 @@ from datetime import datetime
 import pandas as pd
 import gspread
 from google.oauth2.service_account import Credentials
+from oauth2client.service_account import ServiceAccountCredentials
+
 
 # --- Google Sheets Setup ---
 # Define the scope and authenticate with Google Sheets
