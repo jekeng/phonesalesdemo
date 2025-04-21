@@ -33,7 +33,9 @@ creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
 client = gspread.authorize(creds)
 
 # Open the Google Sheet by name
-sheet = client.open("Phone Sales Tracker").sheet1  # Replace with your sheet name
+sheet = client.open("Phone Sales Stats").sheet1  # Replace with your sheet name
+
+
 
 # --- Initialize Session State ---
 if 'stats' not in st.session_state:
